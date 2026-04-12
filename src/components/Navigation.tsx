@@ -25,12 +25,8 @@ export default function Navigation() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3" data-hover="HOME">
-            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 2L2 10V22L16 30L30 22V10L16 2Z" stroke="#1A5D42" strokeWidth="2"/>
-              <circle cx="16" cy="16" r="4" fill="#C69B24"/>
-            </svg>
-            <span className="font-display font-bold tracking-widest text-lg">CODESSTELLAR</span>
+          <Link to="/" className="flex items-center" data-hover="HOME">
+            <img src="/assets/logo-full.png" alt="Codesstellar Logo" className="h-8 md:h-10 w-auto object-contain" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

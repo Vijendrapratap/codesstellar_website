@@ -44,23 +44,14 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
     >
       <div className="flex flex-col items-center gap-8">
         <div className="flex items-center gap-4">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <motion.path
-              d="M16 2L2 10V22L16 30L30 22V10L16 2Z"
-              stroke="#1A5D42"
-              strokeWidth="2"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
-            />
-            <motion.circle
-              cx="16" cy="16" r="4"
-              fill="#C69B24"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.4 }}
-            />
-          </svg>
+          <motion.img
+            src="/assets/logo-icon.png"
+            alt="Loading Icon"
+            className="w-12 h-12 object-contain"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          />
           <h1 className="text-2xl font-display font-bold tracking-widest text-text-primary h-8 flex items-center">
             {text}
             <motion.span 
