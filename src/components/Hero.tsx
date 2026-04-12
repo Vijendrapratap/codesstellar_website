@@ -94,8 +94,8 @@ function QuantumLattice() {
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[100svh] flex flex-col overflow-hidden hero-gradient">
-      <div className="flex-1 flex flex-col lg:flex-row max-w-7xl w-full mx-auto px-6 pt-32 pb-12">
+    <section className="relative w-full min-h-screen flex flex-col hero-gradient">
+      <div className="flex-1 flex flex-col lg:flex-row max-w-7xl w-full mx-auto px-6 pt-32 pb-24">
         
         {/* Left Content */}
         <div className="w-full lg:w-[55%] flex flex-col justify-center z-10">
