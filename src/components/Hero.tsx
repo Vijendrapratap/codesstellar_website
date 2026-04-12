@@ -94,8 +94,8 @@ function QuantumLattice() {
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex flex-col hero-gradient">
-      <div className="flex-1 flex flex-col lg:flex-row max-w-7xl w-full mx-auto px-6 pt-32 pb-24">
+    <section className="relative w-full h-screen min-h-[700px] flex flex-col overflow-hidden hero-gradient">
+      <div className="flex-1 flex flex-col lg:flex-row max-w-7xl w-full mx-auto px-6 pt-24 pb-12">
         
         {/* Left Content */}
         <div className="w-full lg:w-[55%] flex flex-col justify-center z-10">
@@ -168,8 +168,8 @@ export default function Hero() {
         </div>
 
         {/* Right Canvas */}
-        <div className="absolute inset-0 lg:relative lg:w-[45%] lg:h-full opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto">
-          <Canvas camera={{ position: [0, 0, 8], fov: 45 }} dpr={[1, 1.5]} frameloop="always" gl={{ antialias: false }}>
+        <div className="absolute inset-0 lg:relative lg:w-[55%] lg:h-full opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto">
+          <Canvas camera={{ position: [0, 0, 6], fov: 40 }} dpr={[1, 1.5]} frameloop="always" gl={{ antialias: false }}>
             <PerformanceMonitor>
               <QuantumLattice />
             </PerformanceMonitor>
