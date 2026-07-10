@@ -63,3 +63,15 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+
+  .beat-2, .beat-3, .act2-beat:not(:first-child) {
+    display: none !important;
+  }
+}

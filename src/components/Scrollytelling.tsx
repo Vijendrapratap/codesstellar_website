@@ -13,13 +13,15 @@ export default function Scrollytelling() {
   const act2Ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     const ctx = gsap.context(() => {
       // Act 1: The Problem
       const act1Tl = gsap.timeline({
         scrollTrigger: {
           trigger: act1Ref.current,
           start: "top top",
-          end: "+=200%",
+          end: "+=170%",
           pin: true,
           scrub: 1,
         }
@@ -36,7 +38,7 @@ export default function Scrollytelling() {
         scrollTrigger: {
           trigger: act2Ref.current,
           start: "top top",
-          end: "+=300%",
+          end: "+=240%",
           pin: true,
           scrub: 1,
         }
@@ -67,16 +69,17 @@ export default function Scrollytelling() {
         <div className="absolute inset-0 opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay pointer-events-none"></div>
         
         <div className="beat-1 absolute inset-0 flex flex-col items-center justify-center px-6 text-center max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-display mb-6">Long-lived systems need a plan for post-quantum migration now.</h2>
-          <p className="text-text-secondary text-lg">Public-key cryptography is the first priority. The work starts with knowing where it lives in your stack.</p>
+          <p className="text-sm font-mono text-accent-primary uppercase tracking-[.2em] mb-5">The durability question</p>
+          <h2 className="text-4xl md:text-6xl font-display mb-6">Long-lived systems need a practical plan for cryptographic change.</h2>
+          <p className="text-text-secondary text-lg">Post-quantum readiness begins with a clear inventory of the public-key cryptography already embedded in your stack.</p>
         </div>
 
         <div className="beat-2 absolute inset-0 flex flex-col items-center justify-center px-6 text-center max-w-4xl mx-auto opacity-0">
-          <h2 className="text-4xl md:text-6xl font-display text-accent-tertiary">Every wallet. Every validator. Every bridge.</h2>
+          <h2 className="text-4xl md:text-6xl font-display text-accent-tertiary">Wallets. Validators. Bridges. Signing flows.</h2>
         </div>
 
         <div className="beat-3 absolute inset-0 flex flex-col items-center justify-center px-6 text-center max-w-4xl mx-auto opacity-0">
-          <h2 className="text-4xl md:text-6xl font-display text-gradient-primary">Unless you build quantum-resistant from the ground up.</h2>
+          <h2 className="text-4xl md:text-6xl font-display text-gradient-primary">Make the next cryptographic transition a designed change—not an emergency.</h2>
         </div>
       </section>
 
@@ -88,23 +91,23 @@ export default function Scrollytelling() {
             <div className="flex-1">
               <div className="text-sm font-mono text-accent-primary mb-4">01 / PQC BLOCKCHAIN</div>
               <h3 className="text-4xl md:text-5xl font-display mb-6">Cryptography with an exit strategy</h3>
-              <p className="text-xl text-text-secondary">We isolate cryptographic choices so algorithms, keys, and verification paths can evolve safely.</p>
+              <p className="text-xl text-text-secondary">We map cryptographic dependencies and create migration paths so algorithms, keys, and verification can evolve deliberately.</p>
             </div>
-            <div className="flex-1 h-64 md:h-96 border border-border-subtle rounded-3xl overflow-hidden relative shadow-2xl shadow-accent-primary/5">
-              <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=1000&q=80" alt="Blockchain Structure" className="w-full h-full object-cover mix-blend-luminosity opacity-80" referrerPolicy="no-referrer" />
+            <div className="group flex-1 h-64 md:h-96 border border-border-subtle rounded-3xl overflow-hidden relative shadow-2xl shadow-accent-primary/5">
+              <img src="/assets/editorial/pqc-network.png" alt="Abstract post-quantum cryptography network" className="w-full h-full object-cover opacity-85 transition-transform duration-1000 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-tr from-background via-transparent to-transparent"></div>
             </div>
           </div>
 
           <div className="act2-beat absolute inset-x-6 flex flex-col md:flex-row items-center justify-between gap-12 opacity-0 translate-y-[100px]">
-            <div className="flex-1 h-64 md:h-96 border border-border-subtle rounded-3xl overflow-hidden relative shadow-2xl shadow-accent-secondary/5 p-6 flex flex-col justify-end">
-              <img src="https://images.unsplash.com/photo-1620825937374-87fc7d62828e?auto=format&fit=crop&w=1000&q=80" alt="AI Network" className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40" referrerPolicy="no-referrer" />
+            <div className="group flex-1 h-64 md:h-96 border border-border-subtle rounded-3xl overflow-hidden relative shadow-2xl shadow-accent-secondary/5 p-6 flex flex-col justify-end">
+              <img src="/assets/editorial/security-observability.png" alt="Abstract security observability signal network" className="absolute inset-0 w-full h-full object-cover opacity-55 transition-transform duration-1000 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
               <div className="relative z-10 font-mono text-sm text-accent-secondary w-full">
-                <p className="mb-2">&gt; Initializing AI Agents...</p>
-                <p className="mb-2">&gt; Scanning chain state...</p>
-                <p className="text-accent-tertiary">&gt; Anomaly detected at block #89210</p>
-                <p className="text-accent-primary">&gt; Threat mitigated. State secured.</p>
+                <p className="mb-2">&gt; correlating code and chain signals...</p>
+                <p className="mb-2">&gt; assembling analyst context...</p>
+                <p className="text-accent-tertiary">&gt; review queue created: priority/high</p>
+                <p className="text-accent-primary">&gt; expert verification required</p>
               </div>
             </div>
             <div className="flex-1">
