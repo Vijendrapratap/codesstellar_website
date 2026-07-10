@@ -5,7 +5,6 @@
 
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Cursor from './components/Cursor';
 import Loader from './components/Loader';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -29,7 +28,6 @@ export default function App() {
 
   return (
     <Router>
-      <Cursor />
       {loading && <Loader onComplete={() => setLoading(false)} />}
       
       {!loading && (
