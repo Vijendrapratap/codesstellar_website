@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 
 export default function BentoFeatures() {
@@ -5,8 +7,8 @@ export default function BentoFeatures() {
     <section className="py-32 bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16">
-          <h2 className="text-4xl md:text-6xl font-display mb-6">Aggregated Security. <br/><span className="text-accent-primary">Infinite Scale.</span></h2>
-          <p className="text-xl text-text-secondary max-w-2xl">A unified architecture combining post-quantum cryptography with real-time AI threat detection, designed for the next generation of decentralized applications.</p>
+          <h2 className="text-4xl md:text-6xl font-display mb-6">Security that can <br/><span className="text-accent-primary">change with the threat.</span></h2>
+          <p className="text-xl text-text-secondary max-w-2xl">A practical stack for crypto-agile blockchains: post-quantum migration design, observable systems, and AI-assisted security analysis.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
@@ -19,8 +21,8 @@ export default function BentoFeatures() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(198,155,36,0.1),transparent_50%)]"></div>
             <div className="relative z-10 h-full flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl font-display mb-3">NIST-Approved PQC</h3>
-                <p className="text-text-secondary max-w-md">Implementing CRYSTALS-Kyber and Dilithium algorithms to secure state transitions against Shor's algorithm.</p>
+                <h3 className="text-2xl font-display mb-3">PQC-ready by design</h3>
+                <p className="text-text-secondary max-w-md">Design migration paths around NIST's standardized ML-KEM, ML-DSA, and SLH-DSA families—without locking the protocol into a single future.</p>
               </div>
               <div className="w-full h-32 border border-border-subtle rounded-xl bg-background/50 flex items-center justify-center overflow-hidden relative">
                 {/* Abstract visual representation */}
@@ -40,8 +42,8 @@ export default function BentoFeatures() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(26,93,66,0.15),transparent_50%)]"></div>
             <div className="relative z-10 h-full flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl font-display mb-3">AI Node Sentinel</h3>
-                <p className="text-text-secondary">Transformer models running on-chain to predict and halt malicious smart contract executions.</p>
+                <h3 className="text-2xl font-display mb-3">AI security co-pilot</h3>
+                <p className="text-text-secondary">Turn on-chain signals, code changes, and incident data into explainable review queues for security teams.</p>
               </div>
               <div className="flex items-end gap-2 h-20">
                 {[40, 70, 45, 90, 65, 100].map((h, i) => (
@@ -65,7 +67,7 @@ export default function BentoFeatures() {
              <div className="relative z-10 h-full flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl font-display mb-3">Zero-Knowledge</h3>
-                <p className="text-text-secondary">Quantum-safe STARKs for absolute privacy and scalability.</p>
+                <p className="text-text-secondary">Privacy and verification architecture assessed against performance, trust, and long-term cryptographic assumptions.</p>
               </div>
               <div className="w-12 h-12 rounded-full border-2 border-dashed border-accent-primary animate-[spin_10s_linear_infinite] flex items-center justify-center">
                 <div className="w-4 h-4 bg-accent-primary rounded-full"></div>
@@ -85,15 +87,15 @@ export default function BentoFeatures() {
               <span className="text-text-secondary ml-2">deploy.ts</span>
             </div>
             <div className="text-text-secondary">
-              <p><span className="text-accent-primary">import</span> {'{'} PQCProvider {'}'} <span className="text-accent-primary">from</span> '@codesstellar/sdk';</p>
+              <p><span className="text-accent-primary">import</span> {'{'} CryptoInventory {'}'} <span className="text-accent-primary">from</span> '@codesstellar/assess';</p>
               <br/>
-              <p><span className="text-accent-primary">const</span> network = <span className="text-accent-primary">new</span> PQCProvider({'{'}</p>
-              <p className="pl-4">algorithm: <span className="text-green-400">'CRYSTALS-Dilithium'</span>,</p>
-              <p className="pl-4">aiSentinel: <span className="text-accent-primary">true</span></p>
+              <p><span className="text-accent-primary">const</span> inventory = <span className="text-accent-primary">new</span> CryptoInventory({'{'}</p>
+              <p className="pl-4">scope: <span className="text-green-400">'wallets, nodes, bridges'</span>,</p>
+              <p className="pl-4">reviewMode: <span className="text-accent-primary">'human-in-the-loop'</span></p>
               <p>{'}'});</p>
               <br/>
-              <p className="text-green-400/50">// Network secured against quantum decryption</p>
-              <p><span className="text-accent-primary">await</span> network.connect();</p>
+              <p className="text-green-400/50">// Map dependencies. Prioritize. Plan the migration.</p>
+              <p><span className="text-accent-primary">await</span> inventory.review();</p>
             </div>
           </motion.div>
 

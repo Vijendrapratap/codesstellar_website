@@ -1,10 +1,12 @@
+'use client';
+
 import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { PerformanceMonitor, Line } from '@react-three/drei';
 import * as THREE from 'three';
 import { motion } from 'framer-motion';
 
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 function QuantumLattice() {
   const groupRef = useRef<THREE.Group>(null);
@@ -14,7 +16,7 @@ function QuantumLattice() {
   const dummy = useMemo(() => new THREE.Object3D(), []);
   
   const nodes = useMemo(() => {
-    const temp = [];
+    const temp: { position: THREE.Vector3; phase: number }[] = [];
     for (let i = 0; i < nodeCount; i++) {
       const x = (Math.random() - 0.5) * 10;
       const y = (Math.random() - 0.5) * 10;
@@ -25,7 +27,7 @@ function QuantumLattice() {
   }, []);
 
   const lines = useMemo(() => {
-    const tempLines = [];
+    const tempLines: [THREE.Vector3, THREE.Vector3][] = [];
     for (let i = 0; i < nodeCount; i++) {
       for (let j = i + 1; j < nodeCount; j++) {
         if (nodes[i].position.distanceTo(nodes[j].position) < 2.5) {
@@ -107,7 +109,7 @@ export default function Hero() {
           >
             <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse" />
             <span className="text-[13px] font-mono text-accent-primary uppercase tracking-[0.2em]">
-              Post-Quantum Cryptography
+              Quantum-ready blockchain engineering
             </span>
           </motion.div>
 
@@ -117,9 +119,9 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.5 }}
           >
-            <div className="overflow-hidden"><motion.span initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 0.6, delay: 1.5 }} className="block">The Internet Isn't</motion.span></div>
-            <div className="overflow-hidden"><motion.span initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 0.6, delay: 1.7 }} className="block text-gradient-primary">Quantum-Safe.</motion.span></div>
-            <div className="overflow-hidden"><motion.span initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 0.6, delay: 1.9 }} className="block">We're Building It.</motion.span></div>
+            <div className="overflow-hidden"><motion.span initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 0.6, delay: 1.5 }} className="block">Build for the chain</motion.span></div>
+            <div className="overflow-hidden"><motion.span initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 0.6, delay: 1.7 }} className="block text-gradient-primary">after quantum.</motion.span></div>
+            <div className="overflow-hidden"><motion.span initial={{ y: "100%" }} animate={{ y: 0 }} transition={{ duration: 0.6, delay: 1.9 }} className="block">Stay agile today.</motion.span></div>
           </motion.h1>
 
           <motion.p 
@@ -128,8 +130,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 2.1 }}
           >
-            PQC blockchain infrastructure secured by AI. 
-            Built by engineers who've shipped 50+ protocols.
+            Codesstellar designs crypto-agile blockchain systems, post-quantum migration paths, and AI-assisted security operations for teams building long-lived digital infrastructure.
           </motion.p>
 
           <motion.div 
@@ -138,11 +139,11 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 2.3 }}
           >
-            <Link to="/build" className="px-8 py-4 bg-accent-primary text-background font-medium rounded-full hover:bg-opacity-90 transition-all" data-hover="EXPLORE">
-              Explore Our Technology
+            <Link href="/build" className="px-8 py-4 bg-accent-primary text-background font-medium rounded-full hover:bg-opacity-90 transition-all" data-hover="EXPLORE">
+              Explore capabilities
             </Link>
-            <Link to="/case-studies" className="px-8 py-4 border border-accent-primary text-text-primary font-medium rounded-full hover:bg-accent-primary hover:text-background transition-all" data-hover="CASE STUDIES">
-              View Case Studies
+            <Link href="/case-studies" className="px-8 py-4 border border-accent-primary text-text-primary font-medium rounded-full hover:bg-accent-primary hover:text-background transition-all" data-hover="CASE STUDIES">
+              See our approach
             </Link>
           </motion.div>
 
@@ -153,16 +154,16 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 2.6 }}
           >
             <div>
-              <div className="text-3xl font-display font-bold text-text-primary mb-1">50+</div>
-              <div className="text-xs text-text-secondary uppercase tracking-wider">Chains Built</div>
+              <div className="text-3xl font-display font-bold text-text-primary mb-1">PQC</div>
+              <div className="text-xs text-text-secondary uppercase tracking-wider">migration planning</div>
             </div>
             <div>
-              <div className="text-3xl font-display font-bold text-text-primary mb-1">5+</div>
-              <div className="text-xs text-text-secondary uppercase tracking-wider">Years Expertise</div>
+              <div className="text-3xl font-display font-bold text-text-primary mb-1">AI</div>
+              <div className="text-xs text-text-secondary uppercase tracking-wider">security co-pilots</div>
             </div>
             <div>
-              <div className="text-3xl font-display font-bold text-text-primary mb-1">10+</div>
-              <div className="text-xs text-text-secondary uppercase tracking-wider">Web3 Partners</div>
+              <div className="text-3xl font-display font-bold text-text-primary mb-1">Web3</div>
+              <div className="text-xs text-text-secondary uppercase tracking-wider">engineering systems</div>
             </div>
           </motion.div>
         </div>
@@ -182,13 +183,13 @@ export default function Hero() {
         <div className="flex whitespace-nowrap animate-[ticker_40s_linear_infinite] group-hover:[animation-play-state:paused]">
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex items-center gap-8 px-4 text-sm font-mono text-text-secondary">
-              <span>Post-Quantum Encryption</span>
+              <span>Post-Quantum Readiness</span>
               <span className="text-accent-primary">◆</span>
               <span>NIST PQC Standards 2024</span>
               <span className="text-accent-primary">◆</span>
-              <span>AI Fault Detection</span>
+              <span>AI-Assisted Security</span>
               <span className="text-accent-primary">◆</span>
-              <span>Blockchain Audits</span>
+              <span>Protocol Engineering</span>
               <span className="text-accent-primary">◆</span>
               <span>Web3 Architecture</span>
               <span className="text-accent-primary">◆</span>

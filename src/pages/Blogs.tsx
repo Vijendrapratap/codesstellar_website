@@ -1,13 +1,15 @@
-import BlogPreview from '../components/BlogPreview';
+import Link from 'next/link';
 
-export default function Blogs() {
+export default function LegacyBlogsRedirect() {
   return (
-    <div className="pt-20 min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <h1 className="text-5xl md:text-7xl font-display mb-6">Our Blog</h1>
-        <p className="text-xl text-text-secondary max-w-2xl mb-12">Deep dives into post-quantum cryptography, AI security, and the future of blockchain infrastructure.</p>
+    <div className="min-h-screen bg-background text-text-primary flex items-center justify-center px-6">
+      <div className="max-w-xl text-center">
+        <h1 className="text-4xl font-display mb-4">Codesstellar Blog</h1>
+        <p className="text-text-secondary mb-8">The CMS-powered blog now lives at /blogs.</p>
+        <Link href="/blogs" className="px-6 py-3 rounded-full bg-accent-primary text-background font-medium">
+          Open Blog
+        </Link>
       </div>
-      <BlogPreview />
     </div>
   );
 }

@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -36,7 +38,7 @@ export default function TechStack() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-24">
           <h2 className="text-4xl md:text-5xl font-display mb-4">The Architecture</h2>
-          <p className="text-text-secondary text-lg max-w-2xl">A vertical stack designed for absolute security and performance.</p>
+          <p className="text-text-secondary text-lg max-w-2xl">A layered approach to security that is practical today and designed to evolve as standards and threats change.</p>
         </div>
 
         <div className="space-y-0">
@@ -49,7 +51,7 @@ export default function TechStack() {
             <div className="w-full md:w-2/3 flex flex-col md:flex-row gap-8 items-start">
               <div className="flex-1">
                 <p className="text-lg text-text-secondary leading-relaxed">
-                  CRYSTALS-Kyber for key encapsulation. CRYSTALS-Dilithium for digital signatures. Falcon for compact signatures.
+                  Crypto inventory, key lifecycle design, and standards-aligned choices for key establishment and digital signatures. We plan hybrid transitions where they reduce migration risk.
                 </p>
               </div>
               <div className="w-full md:w-1/2 aspect-video md:aspect-square max-w-md rounded-3xl overflow-hidden relative border border-border-subtle opacity-80 group-hover:opacity-100 transition-all duration-500 shadow-xl shadow-accent-primary/5">
@@ -93,7 +95,7 @@ export default function TechStack() {
             <div className="w-full md:w-2/3 flex flex-col md:flex-row gap-8 items-start">
               <div className="flex-1">
                 <p className="text-lg text-text-secondary leading-relaxed">
-                  Transformer-based anomaly detection trained on on-chain behavioral data. Real-time threat scoring.
+                  AI-assisted security workflows that group alerts, map dependencies, summarize research, and help experts prioritize what deserves review.
                 </p>
               </div>
               <div className="w-full md:w-1/2 aspect-video md:aspect-square max-w-md rounded-3xl overflow-hidden relative border border-border-subtle opacity-80 group-hover:opacity-100 transition-all duration-500 shadow-xl shadow-accent-secondary/5">
@@ -135,7 +137,7 @@ export default function TechStack() {
             <div className="w-full md:w-2/3 flex flex-col md:flex-row gap-8 items-start">
               <div className="flex-1">
                 <p className="text-lg text-text-secondary leading-relaxed">
-                  Smart contracts, DApps, APIs, and enterprise integrations — all quantum-hardened.
+                  Smart contracts, DApps, APIs, and integrations designed with clear verification boundaries and upgrade paths.
                 </p>
               </div>
               <div className="w-full md:w-1/2 aspect-video md:aspect-square max-w-md rounded-3xl overflow-hidden relative border border-border-subtle opacity-80 group-hover:opacity-100 transition-all duration-500 shadow-xl shadow-white/5">

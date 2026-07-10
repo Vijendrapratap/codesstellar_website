@@ -1,3 +1,5 @@
+'use client';
+
 export default function Partners() {
   const partners = [
     { name: "CoinMarketCap", desc: "Global crypto data standard" },

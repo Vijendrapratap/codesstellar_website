@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -11,7 +13,7 @@ export default function Footer() {
           
           {/* Col 1 */}
           <div className="flex flex-col gap-6">
-            <Link to="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <img src="/assets/logo-full-white.png" alt="Codesstellar Logo" className="h-10 w-auto object-contain" />
             </Link>
             <p className="text-text-secondary text-sm leading-relaxed">
@@ -42,10 +44,10 @@ export default function Footer() {
           <div>
             <h4 className="font-mono text-xs text-text-primary mb-6 uppercase tracking-wider">Company</h4>
             <ul className="space-y-4">
-              <li><Link to="/case-studies" className="text-sm text-text-secondary hover:text-accent-secondary transition-colors">Case Studies</Link></li>
-              <li><Link to="/blogs" className="text-sm text-text-secondary hover:text-accent-secondary transition-colors">Blog</Link></li>
-              <li><Link to="/" className="text-sm text-text-secondary hover:text-accent-secondary transition-colors">About Us</Link></li>
-              <li><Link to="/" className="text-sm text-text-secondary hover:text-accent-secondary transition-colors">Careers</Link></li>
+              <li><Link href="/case-studies" className="text-sm text-text-secondary hover:text-accent-secondary transition-colors">Case Studies</Link></li>
+              <li><Link href="/blogs" className="text-sm text-text-secondary hover:text-accent-secondary transition-colors">Blog</Link></li>
+              <li><Link href="/" className="text-sm text-text-secondary hover:text-accent-secondary transition-colors">About Us</Link></li>
+              <li><Link href="/" className="text-sm text-text-secondary hover:text-accent-secondary transition-colors">Careers</Link></li>
             </ul>
           </div>
 

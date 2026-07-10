@@ -1,5 +1,7 @@
+'use client';
+
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function UserPathways() {
   const pathways = [
@@ -60,7 +62,7 @@ export default function UserPathways() {
               <h3 className="text-2xl font-display mb-3">{path.title}</h3>
               <p className="text-text-secondary mb-8 h-12">{path.desc}</p>
               <Link 
-                to={path.link}
+                href={path.link}
                 className="inline-flex items-center gap-2 text-accent-primary font-medium hover:gap-4 transition-all"
               >
                 {path.linkText}

@@ -1,38 +1,27 @@
-import { useEffect, useState } from 'react';
+'use client';
+
 import { motion } from 'framer-motion';
 
 export default function NetworkStats() {
-  const [threats, setThreats] = useState(14205830);
-  const [txCount, setTxCount] = useState(89240100);
-
-  // Simulate live network activity
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setThreats(prev => prev + Math.floor(Math.random() * 3));
-      setTxCount(prev => prev + Math.floor(Math.random() * 15));
-    }, 800);
-    return () => clearInterval(interval);
-  }, []);
-
   const stats = [
     {
-      label: "Quantum Threats Mitigated",
-      value: threats.toLocaleString(),
+      label: "Security posture",
+      value: 'Crypto-agile',
       color: "text-accent-primary"
     },
     {
-      label: "Total Transactions",
-      value: txCount.toLocaleString(),
+      label: "PQC standards",
+      value: 'FIPS 203–205',
       color: "text-text-primary"
     },
     {
-      label: "Avg. Block Time",
-      value: "400ms",
+      label: "AI workflow",
+      value: 'Human-in-loop',
       color: "text-text-primary"
     },
     {
-      label: "Active Validator Nodes",
-      value: "1,204",
+      label: "Delivery model",
+      value: 'Assess → build',
       color: "text-accent-secondary"
     }
   ];

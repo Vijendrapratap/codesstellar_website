@@ -1,7 +1,9 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,7 +27,7 @@ export default function Navigation() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
-          <Link to="/" className="flex items-center" data-hover="HOME">
+          <Link href="/" className="flex items-center" data-hover="HOME">
             <img src="/assets/logo-full.png" alt="Codesstellar Logo" className="h-8 md:h-10 w-auto object-contain" />
           </Link>
 
@@ -63,13 +65,13 @@ export default function Navigation() {
                 </div>
               </div>
             </div>
-            <Link to="/case-studies" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors" data-hover="WORK">Case Studies</Link>
-            <Link to="/blogs" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors" data-hover="READ">Blogs</Link>
+            <Link href="/case-studies" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors" data-hover="WORK">Case Studies</Link>
+            <Link href="/blogs" className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors" data-hover="READ">Blogs</Link>
           </nav>
 
           <div className="hidden md:block">
             <Link 
-              to="/build"
+              href="/build"
               className="px-5 py-2 rounded-full border border-accent-primary text-sm font-medium text-accent-primary hover:bg-accent-primary/10 transition-all duration-300 glow-effect inline-block"
               data-hover="BUILD"
             >
@@ -102,28 +104,28 @@ export default function Navigation() {
             </div>
             <div className="flex-1 flex flex-col justify-center px-8 gap-8">
               <Link
-                to="/"
+                href="/"
                 className="text-4xl font-display font-bold text-text-primary"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
-                to="/case-studies"
+                href="/case-studies"
                 className="text-4xl font-display font-bold text-text-primary"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Case Studies
               </Link>
               <Link
-                to="/blogs"
+                href="/blogs"
                 className="text-4xl font-display font-bold text-text-primary"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blogs
               </Link>
               <Link 
-                to="/build"
+                href="/build"
                 className="mt-8 px-6 py-3 rounded-full bg-accent-primary text-background font-medium text-lg w-fit text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
